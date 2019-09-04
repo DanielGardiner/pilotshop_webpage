@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: Arial;
+  margin: 0;
+}
+
+/* header-minor */
+
+.header-minor {
+  overflow: auto;
+  background-color: rgb(240, 240, 240);
+}
+
+.header-minor .contact-number {
+  float: left;
+  color: rgb(140, 140, 140);
+  font-size: 1rem;
+  padding-left: 16%;
+}
+
+.header-minor .account-nav {
+  float: right;
+  display: flex;
+  padding-right: 20px;
+}
+
+.header-minor .account-nav .links {
+  padding-left: 20px;
+  padding-top: 20px;
+  color: rgb(140, 140, 140);
+  font-size: 1rem;
+}
+
+.header-minor a {
+  text-decoration: none;
+  color: rgb(140, 140, 140);
+}
+
+.header-minor a:visited {
+  color: rgb(140, 140, 140);
+}
+
+.header-minor .input {
+  height: 100px;
+}
+
+/* header-major */
+
+.header-major {
+  overflow: auto;
+  background-color: white;
+  height: 80px;
+}
+
+.header-major .logo {
+  float: left;
+  padding-left: 10%;
+  padding-top: 16px;
+}
+
+.header-major .site-nav {
+  float: right;
+  display: flex;
+  width: 50%;
+}
+
+.header-major .site-nav .links:nth-child(1) {
+  padding-left: 0;
+}
+
+.header-major .site-nav .links {
+  padding-left: 20px;
+  padding-top: 30px;
+  color: rgb(140, 140, 140);
+  font-size: 1rem;
+}
+
+.header-major .links a {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.header-major .links a:hover {
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.header-major .links a:visited {
+  color: black;
+}
+
+#products-link {
+  position: relative;
+}
+
+#products-link::before {
+  padding: 2px;
+  content: "HOT DEALS";
+  background-color: red;
+  font-size: 0.65rem;
+  color: white;
+  position: absolute;
+  top: 8px;
+  left: 60px;
+  z-index: 20;
+}
+
+/* strap */
+
+.strap {
+  background-image: url(https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/slide1_image.jpg?0);
+  position: relative;
+}
+
+.strap .container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 300px;
+}
+
+.strap .container h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.strap .container p {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.strap .container a {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 10px;
+}
+
+/* sub-strap */
+
+/*
+.sub-strap .container {
+	max-width: 50%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.sub-strap .box {
+	float: left;
+	padding-left: 60px;
+	padding-right: 60px;
+	width: 33.3%;
+	
+}
+
+.sub-strap p {
+	clear: left;
+	text-align: center;
+}
+*/
+
+.sub-strap {
+}
+
+.sub-strap .container {
+  width: 50%;
+  margin: -150px auto;
+  display: flex;
+  align-content: center;
+}
+
+.sub-strap .box {
+  width: 33.3%;
+  z-index: 100;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: white;
+  justify-items: space-between;
+}
+
+#box1 {
+  background-image: url(https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase1_img.jpg?0);
+}
+
+#box2 {
+  background-image: url(https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase2_img.jpg?0);
+}
+
+#box3 {
+  background-image: url(https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase3_img.jpg?0);
+}
+
+.sub-strap h3 {
+  clear: left;
+  text-align: center;
+}
+
+.sub-strap p {
+  clear: left;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.sub-strap-text {
+  margin-bottom: 30px;
+  margin-top: 200px;
+}
+
+/* panel */
+
+.panel .container {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel .box {
+  width: 25%;
+}
+
+.box h6 {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  padding-right: 20px;
+}
+
+.box p {
+  font-size: 0.7rem;
+  padding-right: 20px;
+}
+
+.box .price-emphasize {
+  color: rgb(51, 184, 255);
+  font-size: 1.1rem;
+}
+
+.box .price-old {
+  text-decoration: line-through;
+}
