@@ -17,17 +17,19 @@
 	<div class="header-minor">
 
 		<div class="contact-number">
-			<p>+800-2345-6789</p>
+			<a href="tel:+800-2345-6789"><p>+800-2345-6789</p></a>
 		</div>
 		
 		<div class="account-nav">
-			<div class="links"><a href="#">MY ACCOUNT</a></div>
-			<div class="links"><a href="#">WISHLIST</a></div>
+			<div class="links front-response"><a href="#">ACCOUNT</a></div>
+			<div class="links front-response"><a href="#">WISHLIST</a></div>
 			<div class="links"><a href="#">CHECKOUT</a></div>
 			<div class="links"><a href="#">USD</a></div>
 			<div class="links"><a href="#">CART</a></div>
-			<div class="links"><input type="text" name="search" value="SEARCH STORE"></div>
-			<div class="links"><a href="#">SEARCH IMG</a></div>
+			<form action="" class="links">
+				<input type="text" value="SEARCH STORE">
+				<input type="submit">
+			</form>
 		</div>
 	</div>	
 	
@@ -41,7 +43,7 @@
 		</div>
 		
 		<div class="site-nav">
-			<div class="links"><a href="#">HOME</a></div>
+			<div class="links"><a href="#" id="home">HOME</a></div>
 			<div class="links" id="products-link"><a href="#">PRODUCTS</a></div>
 			<div class="links"><a href="#">BLOG</a></div>
 			<div class="links"><a href="#">SALE</a></div>
