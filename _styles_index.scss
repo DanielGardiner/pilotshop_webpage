@@ -1,3 +1,7 @@
+
+$navGreyDefault: rgb(140, 140, 140);
+$navBlueHover: rgb(28, 63, 138);
+
 * {
   box-sizing: border-box;
 }
@@ -17,13 +21,13 @@ body {
 
 .header-minor .contact-number a {
   float: left;
-  color: rgb(140, 140, 140);
+  color: $navGreyDefault;
   font-size: 1rem;
   padding-left: 16%;
 }
 
 .header-minor .contact-number a:hover {
-  color: rgb(28, 63, 138);
+  color: $navBlueHover;
 }
 
 .header-minor .account-nav {
@@ -35,7 +39,7 @@ body {
 .header-minor .account-nav .links {
   padding-left: 20px;
   padding-top: 20px;
-  color: rgb(140, 140, 140);
+  color: $navGreyDefault;
   font-size: 1rem;
 }
 
@@ -45,20 +49,20 @@ body {
   background-color: rgb(240, 240, 240);
   border: transparent;
   font-size: 1rem;
-  color: rgb(140, 140, 140);
+  color: $navGreyDefault;
 }
 
 .header-minor .account-nav .links a:hover {
-  color: rgb(28, 63, 138);
+  color: $navBlueHover;
 }
 
 .header-minor a {
   text-decoration: none;
-  color: rgb(140, 140, 140);
+  color: $navGreyDefault;
 }
 
 .header-minor a:visited {
-  color: rgb(140, 140, 140);
+  color: $navGreyDefault;
 }
 
 .header-minor .input {
@@ -162,18 +166,18 @@ body {
 #products-link::before {
   padding: 2px;
   content: "HOT DEALS";
-  background-color: red;
+  background-color: #ff0000;
   font-size: 0.65rem;
-  color: white;
+  color: #ffffff;
   position: absolute;
   top: 5px;
   left: 52px;
   z-index: 20;
-  border: 4px solid white;
+  border: 4px solid #ffffff;
 }
 
 #home {
-  border: 2px solid black;
+  border: 2px solid #000000;
 }
 
 
@@ -217,24 +221,7 @@ body {
     margin: 0 auto;
   }
 
-
 }
-
-
-
-/*@media (max-width: 1300px) {*/
-/*  .header-major {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    width: 60%;*/
-/*    margin: 0 auto;*/
-/*  }*/
-/*}*/
-
-
-
-
-
 
 
 /* strap */
@@ -243,40 +230,41 @@ body {
   background-image: url("https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/slide1_image.jpg?0");
   background-size: cover;
   position: relative;
-}
 
-.strap .container {
-  max-width: 50%;
-  margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 280px;
-}
+  .container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 280px;
+  }
 
-.strap h1 {
-  color: white;
-  font-size: 5rem;
-  text-align: center;
-  margin: 20px 0;
-}
+  h1 {
+    color: #ffffff;
+    font-size: 5rem;
+    text-align: center;
+    margin: 20px 0;
+  }
 
-.strap .container p {
-  color: white;
-  font-size: 1.4rem;
-  text-align: center;
-}
+  p {
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: center;
+  }
 
-.strap .container a {
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  border: 2px solid white;
-  padding: 10px;
-}
+  a {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    padding: 10px;
+  }
 
-.strap .container a:hover {
-  background-color: rgb(93, 169, 240);
-  border-color: rgb(33, 112, 185);
+  a:hover {
+    background-color: rgb(93, 169, 240);
+    border-color: rgb(33, 112, 185);
+  }
+
 }
 
 @media (max-width: 1361px) {
@@ -300,26 +288,45 @@ body {
 /* sub-strap */
 
 .sub-strap {
+
+  .container {
+    width: 70%;
+    margin: -150px auto;
+    display: flex;
+    align-content: center;
+  }
+
+  .box {
+    width: 33.3%;
+    z-index: 100;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    //justify-items: space-between;
+  }
+
+  .box-text {
+    text-align: center;
+  }
+
+  h3 {
+    clear: left;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: lighter;
+  }
+
+  .box p {
+    clear: left;
+    text-align: center;
+    font-size: 1rem;
+  }
+
 }
 
-.sub-strap .container {
-  width: 70%;
-  margin: -150px auto;
-  display: flex;
-  align-content: center;
-}
-
-.sub-strap .box {
-  width: 33.3%;
-  z-index: 100;
-  padding-top: 50px;
-  padding-bottom: 40px;
-  margin-left: 8px;
-  margin-right: 8px;
-  font-size: 1.2rem;
-  color: white;
-  justify-items: space-between;
-}
 
 #box1 {
   background-image: url("https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase1_img.jpg?0");
@@ -334,19 +341,6 @@ body {
 #box3 {
   background-image: url("https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase3_img.jpg?0");
   background-size: contain;
-}
-
-.sub-strap h3 {
-  clear: left;
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: lighter;
-}
-
-.sub-strap .box p {
-  clear: left;
-  text-align: center;
-  font-size: 1rem;
 }
 
 .sub-strap-text {
@@ -368,46 +362,64 @@ body {
   }
 }
 
-
 /* panel */
 
 .panel {
   margin-bottom: 100px;
-}
 
-.panel .container {
-  max-width: 70%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.panel .box {
-  width: 25%;
-}
+  .box {
+    width: 25%;
+  }
 
-.box h6 {
-  font-size: 0.9rem;
-  margin-bottom: 2px;
-  padding-right: 20px;
-}
+  h6 {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+    padding-right: 20px;
+  }
 
-.box p {
-  font-size: 0.7rem;
-  padding-right: 20px;
-}
+  p {
+    font-size: 0.7rem;
+    padding-right: 20px;
+  }
 
-.box .price-emphasize {
-  color: rgb(51, 184, 255);
-  font-size: 1.1rem;
-}
+  .price-emphasize {
+    color: rgb(51, 184, 255);
+    font-size: 1.1rem;
+  }
 
-.box .price-old {
-  text-decoration: line-through;
-}
+  .price-old {
+    text-decoration: line-through;
+  }
 
-.panel .box {
-  position: relative;
+  .box {
+    position: relative;
+  }
+
+  .price-reduction {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6661;
+    border-radius: 50%;
+
+    p {
+      margin-left: 5px;
+      font-size: 1rem;
+    }
+
+  }
+
 }
 
 @media (max-width: 1000px) {
@@ -427,5 +439,4 @@ body {
     margin: 0 50px 20px 0;
   }
 }
-
 
