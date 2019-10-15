@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js" integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <title>PILOT SHOP | PILOT SHOP</title>
   </head>
@@ -98,123 +100,35 @@
 
     <!-- panel -->
 
+    <script id="box-template" type="text/x-handlebars-template">
+      {{#each products}}
+      <div class="box-product">
+        <img src="{{image}}" alt="">
+      <div class="box-text">
+        <h6>{{name}}</h6>
+        <p>{{desc}}</p>
+        <p>
+          {{#if discount}}
+          From <span class="price-emphasize">${{price}}</span>
+          <span class="price-old">${{originalPrice}}</span>
+          {{else}}
+          <span class="price-emphasize">${{price}}</span>
+          {{/if}}
+        </p>
+      </div>
+        {{#if discount}}
+        <div class="price-sticker">
+          <p>-{{discount}}%</p>
+        </div>
+        {{/if}}
+      </div>
+      {{/each}}
+    </script>
+
     <div class="panel">
       <div class="container">
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/akg_aviation_av100_anr_headset_02_270x335_crop_top.png?v=1480672940"
-            width="90%"
-          />
-          <div class="box-text">
-            <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-            <p>When you deal with sky during next...</p>
-            <p>
-              From <span class="price-emphasize">$66.00</span>
-              <span class="price-old">$76.00</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/alpha_industries_men_s_cwu_pilot_x_flight_jacket_02_270x335_crop_top.png?v=1480672952"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>Whichever aircrat part you need...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/american_optical_original_pilot_eyewear_57mm_frame_2_270x335_crop_top.png?v=1480672961"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>We serve pilots of all kinds of ...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/aspen_avionics_evolution_02_270x335_crop_top.png?v=1480672974"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>Our store was created back in 19...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/avidyne_ex5000_r8_0_cirrus_multifunction_display_02_270x335_crop_top.png?v=1480673008"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>Whichever aircraft part you need...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/cocoons_fitovers_polarized_sunglasses_pilot_lg_02_270x335_crop_top.png?v=1480673019"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>We serve pilots of all kinds of ...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/david_clark_dc_x11p_panel_anr_enc_aviation_pilot_headset_2_270x335_crop_top.png?v=1480673029"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>Our store was created back in 19...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.shopify.com/s/files/1/1634/8185/products/garmin_aera_796_02_270x335_crop_top.png?v=1480673041"
-            width="90%"
-          />
-          <div class="box-text">
-          <h6>AKG AVIATION AV100 ANR HEADSET</h6>
-          <p>We care about our loyal customer...</p>
-          <p>
-            From <span class="price-emphasize">$66.00</span>
-            <span class="price-old">$76.00</span>
-          </p>
-        </div>
-        </div>
       </div>
     </div>
+
   </body>
 </html>
